@@ -15,7 +15,7 @@ from opencensus.ext.azure.trace_exporter import AzureExporter
 from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 from opencensus.stats import aggregation as aggregation_module
 from opencensus.stats import measure as measure_module
-from opencensus.stats import stats 
+from opencensus.stats import stats
 from opencensus.stats import view as view_module
 from opencensus.tags import tag_map as tag_map_module
 from opencensus.trace import config_integration
@@ -26,14 +26,14 @@ from opencensus.trace.tracer import Tracer
 # Logging
 logger = logging.getLogger(__name__)
 handler = AzureLogHandler(
-    connection_string="InstrumentationKey=47394acb-5717-48ce-8389-448b69e6ff6a"
+    connection_string="InstrumentationKey=71f87e8f-dc30-4489-9956-5212d768c44d"
 )
 handler.setFormatter(logging.Formatter("%(traceId)s %(spanId)s %(message)s"))
 logger.addHandler(handler)
 # Logging custom Events
 logger.addHandler(
     AzureEventHandler(
-        connection_string="InstrumentationKey=47394acb-5717-48ce-8389-448b69e6ff6a"
+        connection_string="InstrumentationKey=71f87e8f-dc30-4489-9956-5212d768c44d"
     )
 )
 # Set the logging level
@@ -46,14 +46,14 @@ config_integration.trace_integrations(['requests'])
 
 exporter = metrics_exporter.new_metrics_exporter(
     enable_standard_metrics=True,
-    connection_string="InstrumentationKey=47394acb-5717-48ce-8389-448b69e6ff6a",
+    connection_string="InstrumentationKey=71f87e8f-dc30-4489-9956-5212d768c44d",
 )
 view_man.register_exporter(exporter)
 
 # Tracing
 tracer = Tracer(
     exporter=AzureExporter(
-        connection_string="InstrumentationKey=47394acb-5717-48ce-8389-448b69e6ff6a"
+        connection_string="InstrumentationKey=71f87e8f-dc30-4489-9956-5212d768c44d"
     ),
     sampler=ProbabilitySampler(1.0),
 )
@@ -64,7 +64,7 @@ app = Flask(__name__)
 middleware = FlaskMiddleware(
     app,
     exporter=AzureExporter(
-        connection_string="InstrumentationKey=47394acb-5717-48ce-8389-448b69e6ff6a"
+        connection_string="InstrumentationKey=71f87e8f-dc30-4489-9956-5212d768c44d"
     ),
     sampler=ProbabilitySampler(rate=1.0),
 )
@@ -151,6 +151,6 @@ def index():
 
 if __name__ == "__main__":
     # TODO: Use the statement below when running locally
-    # app.run() 
+    # app.run()
     # TODO: Use the statement below before deployment to VMSS
     app.run(host='0.0.0.0', threaded=True, debug=True) # remote
