@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Variables
-resourceGroup="acdnd-c4-project"
-clusterName="udacity-cluster"
+resourceGroup="cloud-demo"
+clusterName="developerproject4-cluster"
 
 # Install aks cli
 echo "Installing AKS CLI"
@@ -52,5 +52,5 @@ echo "Verifying connection to $clusterName"
 kubectl get nodes
 
 # echo "Deploying to AKS cluster"
-# The command below will deploy a standard application to your AKS cluster. 
+# The command below will deploy a standard application to your AKS cluster.
 # kubectl apply -f azure-vote.yaml
