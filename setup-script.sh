@@ -2,7 +2,7 @@
 
 # Variables
 resourceGroup="cloud-demo"
-location="southcentralus"
+location="westus"
 osType="UbuntuLTS"
 vmssName="developerproject4-vmss"
 adminName="nqthien041292"
@@ -17,10 +17,10 @@ probeName="tcpProbe"
 vmSize="Standard_B1s"
 storageType="Standard_LRS"
 
-# Create resource group. 
-# This command will not work for the Cloud Lab users. 
-# Cloud Lab users can comment this command and 
-# use the existing Resource group name, such as, resourceGroup="cloud-demo-153430" 
+# Create resource group.
+# This command will not work for the Cloud Lab users.
+# Cloud Lab users can comment this command and
+# use the existing Resource group name, such as, resourceGroup="cloud-demo-153430"
 echo "STEP 0 - Creating resource group $resourceGroup..."
 
 az group create \
@@ -69,7 +69,7 @@ az vmss create \
   --upgrade-policy-mode automatic \
   --admin-username $adminName \
   --generate-ssh-keys \
-  --verbose 
+  --verbose
 
 echo "VM scale set created: $vmssName"
 
