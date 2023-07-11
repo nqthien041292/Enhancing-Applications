@@ -2,7 +2,7 @@
 
 # Variables
 resourceGroup="cloud-demo"
-location="eastus"
+location="westeurope"
 osType="UbuntuLTS"
 vmssName="developerproject4-vmss"
 adminName="nqthien041292"
