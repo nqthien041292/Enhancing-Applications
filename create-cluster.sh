@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-resourceGroup="cloud-demo"
+resourceGroup="cloud-demo1"
 clusterName="developerproject4-cluster"
 
 echo "AKS CLI installed"
@@ -15,7 +15,7 @@ az aks create \
 --node-count 1 \
 --generate-ssh-keys
 
-az aks enable-addons -a monitoring -n $clusterName -g $resourceGroup --workspace-resource-id "/subscriptions/0173e877-ea67-406c-b540-ed9828abafea/resourceGroups/cloud-demo/providers/Microsoft.OperationalInsights/workspaces/loganalytics-239124"
+az aks enable-addons -a monitoring -n $clusterName -g $resourceGroup --workspace-resource-id "/subscriptions/622411f9-056b-4cd2-8612-cd26091f1c5c/resourceGroups/cloud-demo1/providers/Microsoft.OperationalInsights/workspaces/developerproject4-loganalytics"
 
 echo "AKS cluster created: $clusterName"
 
