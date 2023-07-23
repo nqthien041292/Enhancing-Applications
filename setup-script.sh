@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-resourceGroup="cloud-demo"
+resourceGroup="cloud-demo1"
 location="eastus"
 osType="UbuntuLTS"
 vmssName="developerproject4-vmss"
