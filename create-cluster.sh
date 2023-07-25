@@ -15,7 +15,7 @@ az aks create \
 --node-count 1 \
 --generate-ssh-keys
 
-az aks enable-addons -a monitoring -n $clusterName -g $resourceGroup --workspace-resource-id "/subscriptions/9ed10bd5-8420-4fdf-b87f-621a5ee7dd47/resourceGroups/cloud-demo/providers/Microsoft.OperationalInsights/workspaces/loganalytics-239229"
+az aks enable-addons -a monitoring -n $clusterName -g $resourceGroup --workspace-resource-id "/subscriptions/9f539354-ac81-4e3d-9082-b222d918d1bd/resourceGroups/cloud-demo/providers/Microsoft.OperationalInsights/workspaces/loganalytics-239245"
 
 echo "AKS cluster created: $clusterName"
 
