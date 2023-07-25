@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Variables
-resourceGroup="cloud-demo1"
-location="eastus"
+resourceGroup="cloud-demo"
+location="westeurope"
 osType="UbuntuLTS"
 vmssName="developerproject4-vmss"
 adminName="nqthien041292"
