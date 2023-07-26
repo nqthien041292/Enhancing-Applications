@@ -3,7 +3,7 @@
 # Variables
 resourceGroup="cloud-demo"
 location="westus"
-osType="UbuntuLTS"
+osType="Ubuntu2204"
 vmssName="developerproject4-vmss"
 adminName="nqthien041292"
 storageAccount="developerproject4storage"
